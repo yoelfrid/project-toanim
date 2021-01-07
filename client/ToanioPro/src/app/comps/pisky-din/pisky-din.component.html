@@ -1,0 +1,39 @@
+<!-- <p>pisky-din works!</p> -->
+<form>
+  <div class="form-group form-inline">
+      Full text search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
+  </div>
+</form>
+<div style="font-size:56px;font-weight: bold;">מאגר פסקי דין של בתי הדין </div><br>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">נושא</th>
+    <th scope="col">תאריך</th>
+    <th scope="col">לינק</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let us of users$ | async; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      <!-- <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + us.flag" class="mr-2" style="width: 20px"> -->
+      <ngb-highlight [result]="us.type" [term]="filter.value"></ngb-highlight>
+    </td>
+    <td>
+    <ngb-highlight [result]="us.date" [term]="filter.value"></ngb-highlight>
+  </td>
+  <td>
+    <ngb-highlight [result]="us.link" [term]="filter.value"></ngb-highlight>
+    <!-- <a>https://dintora.org/article/1546</a> -->
+    <!-- <a href="url">https://dintora.org/article/1546</a> -->
+  </td>
+    <!-- </td> -->
+    <!-- <td><ngb-highlight [result]="us.email | number" [term]="filter.value"></ngb-highlight></td> -->
+    <!-- <td><ngb-highlight [result]="us.password | number" [term]="filter.value"></ngb-highlight></td> -->
+  </tr>
+  </tbody>
+</table>
+
