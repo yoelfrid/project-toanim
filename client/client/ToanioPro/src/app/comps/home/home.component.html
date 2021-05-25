@@ -1,0 +1,103 @@
+
+<br/><br/>
+
+<div class="container">
+  <!-- style="text-align: center;" -->
+<div id="secondRowContainer" ></div>
+<marquee width="100%" direction="right" height="100px">
+  <div style="font-size:50px;font-weight: bold;">  ברוכים הבאים ללשכת הטוענים הרבניים בישראל</div><br>
+</marquee>
+<!-- <div style="font-size:50px;font-weight: bold;"> לשכת הטוענים הרבניים בישראל</div><br> -->
+<br><br>
+<!-- <div style="font-size:50px;font-weight: bold;">מאגר פסקי דין של בתי הדין לממונות</div><br> -->
+<div id="marqueeContainer" class="containerParent">
+<h4 id="nevPsakimHeadline">חדשות בתי הדין הרבניים</h4>
+<div id="marquee" class="marquee"></div>
+<div>
+
+<marquee class="containerMarquee .marquee" width="60%" direction="up" height="80%" onmouseover="this.stop();" onmouseout="this.start();">
+  <!-- This is sample scrolling text.
+
+  This is sample scrolling text. -->
+  <a *ngFor='let i of allNews'>
+  <a (mouseleave)="cc()" class="marqueeLink" href=`{{i.link}}`><b>{{i.about}}</b></a>
+  <p class="marqueeLinkSecondLine">{{i.date}}</p><br/><br/>
+  </a>
+  
+</marquee>
+
+</div>
+
+</div>
+
+<div id="secondRowButtons" class="">
+
+  <div style="margin-top:30px;" class="option secondRowIndividualButtons">
+      <a  [routerLink]="['/List']" class="simple-button" href="/Psakim/Contact?subject=register">מתגרש? לחץ לקבלת טו"ר באזור מגורך</a>
+  </div>
+  <div style="margin-top:30px;" class="option secondRowIndividualButtons">
+      <a class="simple-button" href="https://www.psakim.org/Psakim/Extentions">רשימת בתי דין לממונות </a>
+  </div>
+  <div style="margin-top:30px;" class="option secondRowIndividualButtons">
+      <a class="simple-button" href="/Psakim/Extentions">מאמרים, עיונים, תשובות ובתי דין </a>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- <br/><br/>
+<div class="container">
+<div id="secondRowContainer"></div>
+<marquee width="100%" direction="right" height="100px">
+  <div style="font-size:50px;font-weight: bold;">  ברוכים הבאים ללשכת הטוענים הרבניים בישראל</div><br>
+</marquee>
+<br><br>
+<div id="marqueeContainer" class="containerParent">
+<h4 id="nevPsakimHeadline">חדשות בתי הדין הרבניים</h4>
+<div id="marquee" class="marquee"></div>
+<div>
+<marquee class="containerMarquee .marquee" width="60%" direction="up" height="80%" onmouseover="this.stop();" onmouseout="this.start();">
+
+  <a (mouseleave)="cc()" class="marqueeLink" href="https://www.gov.il/he/departments/news/news_8008"><b>שירותים חדשים באתר בתי הדין</b></a>
+  <p class="marqueeLinkSecondLine">יג' תשרי תשפ"א</p><br/><br/>
+
+  <a class="marqueeLink" href="https://www.gov.il/he/departments/news/rbc_corona_news_13"><b>הנחיות תו סגול בבתי הדין הרבניים</b></a><br/>
+  <p class="marqueeLinkSecondLine">כב' תשרי תשפ"א</p><br/><br/>
+
+  <a class="marqueeLink" href="https://www.gov.il/he/departments/news/daniel_peperman"><b>בית הדין פסק כנגד סרבן גט והחליט לפרסם את שמו ואת תמונתו</b></a>
+  <p class="marqueeLinkSecondLine">כט' תשרי תשפ"א</p><br/><br/>
+
+  <a class="marqueeLink" href="https://www.kikar.co.il/378531.html"><b>חריג: חרדי קיבל היתר לשאת אישה שנייה</b></a>
+  <p class="marqueeLinkSecondLine">א' חשוון תשפ"א</p><br/><br/>
+
+  <a class="marqueeLink" href="https://www.kikar.co.il/365109.html"><b>שוחרר מהכלא, ברח, נתפס והסכים לתת גט</b></a>
+  <p class="marqueeLinkSecondLine">ב' כסלו תשפ"א</p><br/><br/>
+
+  <a class="marqueeLink" href="https://www.kikar.co.il/347429.html"><b>סכסוך גירושין: הוציאה צו עיכוב יציאה לבעלה ונקנסה
+  </b></a>
+  <p class="marqueeLinkSecondLine">ג' כסלו תשפ"א</p><br/><br/>
+
+  <a class="marqueeLink" href="https://www.kikar.co.il/309627.html"><b>בעל נתן גט לאשתו בשיחת וידאו בוואטסאפ</b></a>
+  <p class="marqueeLinkSecondLine">ה' כסלו תשפ"א</p><br/><br/>
+</marquee>
+
+</div>
+
+</div>
+
+<div id="secondRowButtons" class="">
+
+  <div style="margin-top:30px;" class="option secondRowIndividualButtons">
+      <a  [routerLink]="['/List']" class="simple-button" href="/Psakim/Contact?subject=register">מתגרש? לחץ לקבלת טו"ר באזור מגורך</a>
+  </div>
+  <div style="margin-top:30px;" class="option secondRowIndividualButtons">
+      <a class="simple-button" href="https://www.psakim.org/Psakim/Extentions">רשימת בתי דין לממונות </a>
+  </div>
+  <div style="margin-top:30px;" class="option secondRowIndividualButtons">
+      <a class="simple-button" href="/Psakim/Extentions">מאמרים, עיונים, תשובות ובתי דין </a>
+  </div>
+
+</div> -->

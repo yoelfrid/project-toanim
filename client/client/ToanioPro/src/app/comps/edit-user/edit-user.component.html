@@ -1,0 +1,155 @@
+<!-- <p>Edit User!</p> -->
+<div class="container emp-profile">
+    <form [formGroup]="formdata" method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <div class="file btn btn-lg btn-primary">
+                        Change Photo
+                        <input #image type="file" name="file" (change)="onUpload(image)"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                            <h5>
+                                <input #name formControlName="name">
+                            </h5>
+                            <h6>
+                                טוען רבני מוסמך
+                            </h6>
+                            <p class="proile-rating">שנות וותק : <span>12</span></p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab"  role="tab" aria-controls="home" aria-selected="true">מי אני</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">ממליצים</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <input  type="button" class="profile-edit-btn" name="btnAddMore" (click)="save(name.value,email.value,addres.value,about.value)" value="שמירה"/>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>פסקי דין שלי</p>
+                    <a href=""></a><br/>
+                    <a href="http://www.eretzhemdah.org/content.asp?PageId=40&lang=he">דיני ממונות</a><br/>
+                    <a href="https://www.psakdin.co.il/Court/%D7%A7%D7%98%D7%98%D7%95%D7%AA-%D7%95%D7%9E%D7%A8%D7%99%D7%91%D7%95%D7%AA-%D7%9B%D7%A2%D7%99%D7%9C%D7%94-%D7%9C%D7%94%D7%A4%D7%A1%D7%93-%D7%9B%D7%AA%D7%95%D7%91%D7%94-%D7%95%D7%91%D7%93%D7%99%D7%9F-%D7%9B%D7%AA%D7%95%D7%91%D7%94-%D7%9E%D7%95%D7%92%D7%96%D7%9E%D7%AA#.X8USjM0zaUk">כתובת אישה</a><br/>
+                    <a href="https://shared-parenting.co.il/child-support-judgments/">מזונות ילדים</a><br/>
+                    <a href="https://www.justice.gov.il/Campaign/hadracha/MadrichYerusot/Pages/YerusaAlPiDin.aspx">דיני ירושה</a><br/>
+                 
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>שם</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><input #name formControlName="name"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>אימייל</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><input #email formControlName="email"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>טלפון</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>050-3121062</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>מספר רשיון</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>1124</p>
+                                    </div> 
+                              
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>כתובת</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><input #addres formControlName="addres"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>אודות</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><input #about formControlName="about"></p>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Experience</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Expert</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Hourly Rate</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>10$/hr</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Total Projects</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>230</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>English Level</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Expert</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Availability</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>6 months</p>
+                                    </div>
+                                </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Your Bio</label><br/>
+                                <p>Your detail description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+

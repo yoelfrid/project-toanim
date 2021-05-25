@@ -1,0 +1,23 @@
+<!-- <p>new-user works!</p> -->
+
+
+  <div class="container">
+    <div class="col-md-6">
+    <div id="logbox">
+      <form id="signup" method="post" action="/signup" (ngSubmit)="onSubmit(name.value,password.value,email.value)" [formGroup]="newRegForm">
+        <h1>משתמש חדש</h1>
+       
+        <input #name name="user[name]" class="form-control" type="text" placeholder="שם משתמש ?" pattern="^[\w]{3,16}$" autofocus="autofocus" required="required" class="input pass"/>
+
+   
+        <input #password name="user[password]" class="form-control" type="password" placeholder="הקש סיסמא" required="required" class="input pass"/>
+        <input #password2 name="user[password2]" class="form-control" type="password" placeholder="אישור סיסמא" required="required" class="input pass"/>
+        <input  #email name="user[email]" class="form-control" type="email" placeholder="מייל" class="input pass"/>
+        <input type="submit" value="! הרשם" class="inputButton"/>
+        <div class="text-center">
+          כבר יש לך חשבון ? <a href="#" id="login_id" (click)="navigate1()">לחץ כאן</a>
+        </div>
+      </form>
+    </div>
+   </div>
+   
