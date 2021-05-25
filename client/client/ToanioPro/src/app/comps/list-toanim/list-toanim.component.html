@@ -1,0 +1,53 @@
+
+  <form>
+    <div class="form-group form-inline">
+        Full text search: <input class="form-control ml-2" type="text" [formControl]="filter"/>
+    </div>
+  </form>
+
+
+  <div class="card">
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">רשימת טוענים רבניים</h3>
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+              class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <thead>
+            <tr>
+
+
+
+              <!-- <th class="text-center">הצג פרופיל</th> -->
+              <th class="text-center">הצג פרופיל</th>
+              <th class="text-center">כתובת</th>
+              <th class="text-center">אימייל</th>
+              <th class="text-center">שם</th>
+              <!-- <th class="text-center">תמונה</th> -->
+
+              <th class="text-center">#</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let i of all'>
+                
+                  <td class="pt-3-half">
+                <span type="button" class="table-up"><a  class="indigo-text" (click)="sendProfile(i.id)">הצג פרופיל<i class="fas fa-long-arrow-alt-up"
+                    aria-hidden="true"></i></a></span>
+              <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                    aria-hidden="true"></i></a></span>
+               </td>
+              <td  class="pt-3-half" contenteditable="true">{{i.addres}}</td>
+              <td  class="pt-3-half" contenteditable="true">{{i.email}}</td>
+              <td  class="pt-3-half" contenteditable="true">{{i.name}}</td>
+              <!-- <td  class="pt-3-half" contenteditable="true">{{i.img}}</td> -->
+
+              <td class="pt-3-half" contenteditable="true">{{i.id}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>
