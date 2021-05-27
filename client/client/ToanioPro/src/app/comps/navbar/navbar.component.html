@@ -1,10 +1,9 @@
-<div class="aaaa">
+<!-- <div class="aaaa">
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="#" [routerLink]="['/']" routerLinkActive="router-link-active">דף הבית</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
     <div class="collapse navbar-collapse" id="navbarsExample03">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -14,27 +13,54 @@
   
           <a class="navbar-brand" href="#" [routerLink]="['/List']" routerLinkActive="router-link-active">רשימת טוענים רבניים</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="navbar-brand" href="#" tabindex="-1" aria-disabled="true" >פורום</a>
-        </li> -->
         <li class="nav-item">
           <a class="navbar-brand" href="#" tabindex="-1" aria-disabled="true" [routerLink]="['/AddList']" routerLinkActive="router-link-active">כניסת משתמש</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="navbar-brand" href="#" tabindex="-1" aria-disabled="true" [routerLink]="['/profile']" routerLinkActive="router-link-active"> פרופיל</a>
-        </li> -->
+       
         <li class="nav-item">
           <a class="navbar-brand" href="#" tabindex="-1" aria-disabled="true" [routerLink]="['/odot']" routerLinkActive="router-link-active"> אודות</a>
         </li>
         <li class="nav-item">
-          <!-- <div *ngIf="ifAdmin=='admin'"> -->
           
             <a  class="navbar-brand" href="#" tabindex="-1" aria-disabled="true" [routerLink]="['/Admin']" routerLinkActive="router-link-active"> מנהל</a>
           
-          <!-- </div> -->
         </li>
   
-        <!-- <li class="nav-item dropdown show">
+   
+      </ul>
+    </div>
+  </nav>
+
+</div> -->
+
+
+
+
+
+
+
+<div style="background-color: rgb(71, 71, 82);"
+class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  border-bottom box-shadow">
+ <form class="form-inline my-2 my-md-0">
+        <input class="form-control" type="text" placeholder="חיפוש">
+      </form>
+      <label>&nbsp;</label>      <label>&nbsp;</label>
+
+          <div *ngIf="ifAdmin == 'admin'">
+<a class="navbar-brand my-0 mr-md-auto font-weight-normal text-white" [routerLink]="['/Admin']" routerLinkActive="router-link-active">כניסת מנהל</a>
+          </div>
+
+<nav class="my-2 my-md-0 mr-md-3">
+  
+  <a  class="navbar-brand p-2 text-white" [routerLink]="['/']" routerLinkActive="router-link-active">דף הבית</a>
+  <a  class="navbar-brand p-2 text-white" [routerLink]="['/List']" routerLinkActive="router-link-active">רשימת טוענים רבניים</a>
+  <a  class="navbar-brand p-2 text-white" [routerLink]="['/AddList']" routerLinkActive="router-link-active">כניסת משתמש</a>
+  <a class="navbar-brand p-2 text-white" [routerLink]="['/PiskyDin']" routerLinkActive="router-link-active">מאגר פס"ד</a>
+  <a  class="navbar-brand p-2 text-white"  [routerLink]="['/odot']" routerLinkActive="router-link-active"> אודות</a>
+  <!-- <a  class="p-2 text-white" >היסטוריה</a> -->
+</nav>
+</div>
+     <!-- <li class="nav-item dropdown show">
           <a class="navbar-brand dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dropdown</a>
           <div class="dropdown-menu show" aria-labelledby="dropdown03">
           
@@ -42,11 +68,3 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li> -->
-      </ul>
-      <!-- <form class="form-inline my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="Search">
-      </form> -->
-    </div>
-  </nav>
-
-</div>

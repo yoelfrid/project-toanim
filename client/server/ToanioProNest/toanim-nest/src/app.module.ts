@@ -6,6 +6,7 @@ import { Users } from './users/entities/user.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { News } from './users/entities/news.entity';
 import { NewsModule } from './news/news.module';
+import { PhotosController } from './photos/photos.controller';
 
 
 @Module({imports: [ 
@@ -21,7 +22,7 @@ import { NewsModule } from './news/news.module';
     }),UsersModule, NewsModule
 
    ],     
-controllers: [AppController],
+controllers: [AppController, PhotosController],
 providers: [AppService],
 })
 export class AppModule {}

@@ -50,6 +50,8 @@ export class EditUserComponent implements OnInit {
 
   }
   onUpload(e) {
+    console.log("e befor",e);
+
     let image = e.files[0] ;
     let fileReader = new FileReader() ;
     fileReader.onload = e => {

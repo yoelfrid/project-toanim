@@ -79,12 +79,12 @@ validateNewUser(name,password,email){
 
 dataId:BehaviorSubject<any>=new BehaviorSubject(null)
 getId(id:number){
-  console.log("id      kk",id);
-  
+  // console.log("id      kk",id);
+
   let url1="http://localhost:3000/users"
 return this.http.get(url1+'/'+id)
 .subscribe((data)=>{
-  console.log("dataaaaa  ",data);
+  // console.log("dataaaaa  ",data);
   // this.dataLogIn=data
   this.dataId.next(data)
 })
@@ -113,5 +113,5 @@ uploadImage(image: File,id) {
   let headers = new HttpHeaders().set('id',id) 
   this.http.post(`http://localhost:3000/users/upload` ,formData,{headers}).subscribe()
 
-  } ;  
+  } ; 
 }

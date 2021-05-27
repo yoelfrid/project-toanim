@@ -67,6 +67,7 @@ export class ListToanimComponent implements OnInit {
       
        this.listSRV.getList1().subscribe((data)=>
       //  data.auction.sort((a, b) => (b.price) - (a.price));
+      
        this.all = data,
        )
 
